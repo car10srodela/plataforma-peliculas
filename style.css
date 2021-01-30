@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 18% 82%;
+    grid-template-rows: 70px 1fr;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #010500;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+}
+
+.header .logo{
+    height: 50px;
+    margin-left: 30px;
+}
+
+.header input{
+    height: 35px;
+    border-radius: 10px;
+    padding: 0px 15px;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.header .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .user-name {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.header .user img {
+    height: 50px;
+}
+
+.menu {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #0C0C0C;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+}
+
+.menu .options {
+    grid-row: 1 / 2;
+    margin: auto 0;
+}
+
+.menu .categories {
+    grid-row: 2 / 3;
+    margin: auto 0;
+}
+
+.menu .settings {
+    grid-row: 3 / 4;
+    margin: auto 0;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li,
+.menu .settings span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.8em;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.menu .options ul li img,
+.menu .settings img {
+    height: 18px;
+    margin-right:10px;
+}
+
+.menu .settings span {
+    margin: 0;
+}
+
+.menu .settings img {
+    margin-left: 10px;
+}
+
+.menu ul li:hover,
+.menu .settings:hover {
+    background-color: #232323;
+}
+
+.main {
+    background-color: #232323;
+    padding: 0 20px;
+    overflow: auto;
+}
+
+.main .category {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+}
+
+.category .movie {
+    cursor: pointer;
+    position: relative;
+}
+
+.main .post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main .post-overlay {
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie:hover .post-overlay {
+    display: flex;
+}
+
+.post-overlay img {
+    width: 60px;
+}
+
+.main h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 15px 0;
+}
